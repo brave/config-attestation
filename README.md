@@ -1,6 +1,6 @@
 # Current service configurations
 
-[![config](https://github.com/brave-experiments/config-attestation-private/actions/workflows/config.yml/badge.svg)](https://github.com/brave-experiments/config-attestation-private/actions/workflows/config.yml)
+[![config](https://github.com/brave/config-attestation/actions/workflows/config.yml/badge.svg)](https://github.com/brave/config-attestation/actions/workflows/config.yml)
 
 At Brave we care about privacy. That means we work to minimize tracking
 on the internet for our users, and that includes interaction

@@ -1,0 +1,16 @@
+/*
+ * Local CSS for decoration configuration results.
+ */
+
+h2.ok::after {
+  content: ' ✅';
+}
+
+h2.warning::after {
+  content: ' ⚠';
+}
+
+h2.error::after {
+  content: ' ❌';
+}
+

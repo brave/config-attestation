@@ -1,0 +1,36 @@
+/*------------------------------------*\
+  #Base
+\*------------------------------------*/
+@tailwind base;
+
+@layer base {
+	html,
+	body {
+		font-size: 16px;
+		height: 100%;
+	}
+
+	body > footer {
+		position: sticky;
+		top: 100vh;
+	}
+
+	pre {
+		background: theme("backgroundColor.container.background") !important;
+	}
+}
+
+/*------------------------------------*\
+  #Components
+\*------------------------------------*/
+@tailwind components;
+
+.hint {
+	border-bottom: 2px dotted theme("colors.red.50");
+	cursor: help;
+}
+
+/*------------------------------------*\
+  #Utilities
+\*------------------------------------*/
+@tailwind utilities;

@@ -1,0 +1,46 @@
+name: config
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+on:
+  workflow_dispatch:
+  schedule:
+  - cron:  '0 */6 * * *' # run every 6 hours
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  fetch_config:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: fetch and display config
+        shell: bash # set -eo pipefail: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#exit-codes-and-error-action-preference
+        run: >-
+          curl -s -X GET "https://api.cloudflare.com/client/v4/zones/${{ secrets.ZONE_ID }}/spectrum/apps"
+          -H "Authorization: Bearer ${{ secrets.CF_TOKEN }}"
+          -H "Content-Type: application/json"
+          | jq --sort-keys --arg GITHUB_REPOSITORY $GITHUB_REPOSITORY --arg GITHUB_RUN_ID $GITHUB_RUN_ID -f filter.jq
+          | tee site/result.json
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: "site/"
+
+  deploy_page:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: fetch_config
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

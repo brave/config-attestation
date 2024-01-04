@@ -24,10 +24,15 @@ jobs:
       - name: fetch and display config
         shell: bash # set -eo pipefail: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#exit-codes-and-error-action-preference
         run: >-
+          ZONE_STATUS=$(curl -s -X GET "https://api.cloudflare.com/client/v4/zones/${{ secrets.ZONE_ID }}"
+          -H "Authorization: Bearer ${{ secrets.CF_TOKEN }}"
+          -H "Content-Type: application/json"
+          | jq -r .result.status)
+
           curl -s -X GET "https://api.cloudflare.com/client/v4/zones/${{ secrets.ZONE_ID }}/spectrum/apps"
           -H "Authorization: Bearer ${{ secrets.CF_TOKEN }}"
           -H "Content-Type: application/json"
-          | jq --sort-keys --arg GITHUB_REPOSITORY $GITHUB_REPOSITORY --arg GITHUB_RUN_ID $GITHUB_RUN_ID -f filter.jq
+          | jq --sort-keys --arg GITHUB_REPOSITORY $GITHUB_REPOSITORY --arg GITHUB_RUN_ID $GITHUB_RUN_ID --arg ZONE_STATUS $ZONE_STATUS -f filter.jq
           | tee site/result.json
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1

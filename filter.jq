@@ -2,6 +2,7 @@
     "github_repository": $GITHUB_REPOSITORY,
     "github_run_id": $GITHUB_RUN_ID,
     "github_run_date": now|todateiso8601,
+    "zone_status": $ZONE_STATUS,
     "result": [
         .result[] | with_entries(
             select(.key | IN(

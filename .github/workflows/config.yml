@@ -35,7 +35,7 @@ jobs:
           | jq --sort-keys --arg GITHUB_REPOSITORY $GITHUB_REPOSITORY --arg GITHUB_RUN_ID $GITHUB_RUN_ID --arg ZONE_STATUS $ZONE_STATUS -f filter.jq
           | tee site/result.json
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@84bb4cd4b733d5c320c9c9cfbc354937524f4d64 # v1
+        uses: actions/upload-pages-artifact@0252fc4ba7626f0298f0cf00902a25c6afc77fa8 # v3
         with:
           path: "site/"
 

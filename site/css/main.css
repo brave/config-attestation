@@ -1508,6 +1508,10 @@ pre {
   padding-top: 2rem;
 }
 
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -1556,6 +1560,10 @@ pre {
 .text-gray-60 {
   --tw-text-opacity: 1;
   color: rgba(var(--tw-color-gray-60), var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 @media (prefers-color-scheme: dark) {

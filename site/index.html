@@ -6,46 +6,46 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
     <title>configs</title>
 
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/prism.css">
     <link rel="stylesheet" href="css/annotation.css">
 </head>
 
-<body class="bg-page-background">
-    <header class="py-5 border-b border-gray-30">
+<body class="bg-page-background text-text-primary">
+    <header class="py-xl border-b border-divider-subtle">
         <div class="container mx-auto flex justify-between items-center">
             <span class="inline-flex items-center">
-                <img class="w-36 dark:hidden inline" src="images/brave-logo.svg" alt="Brave logo" />
-                <img class="w-36 hidden dark:inline" src="images/brave-logo-dark.svg" alt="Brave logo" />
-                <span class="text-h3 text-gray-70 ml-4 font-normal dark:font-light">| config attestation</span>
+                <img class="w-[144px] dark:hidden inline" src="images/brave-logo.svg" alt="Brave logo" />
+                <img class="w-[144px] hidden dark:inline" src="images/brave-logo-dark.svg" alt="Brave logo" />
+                <span class="text-heading-h3 text-neutral-70 mt-s ml-m font-normal">| config attestation</span>
             </span>
         </div>
     </header>
 
-    <main id="data" class="container mx-auto pt-8">
-
-    <div id="about" class="container mx-auto pb-8 text-text-primary">
-      <p>
-        This is an audit report on various service configurations we use.
-        Use it to
-        <a class="underline" href="https://brave.com/published-proxy-config/#verification">confirm</a>
-        the services below are set correctly to protect user privacy.
-      </p>
-    </div>
-
+    <main id="data" class="container mx-auto pt-3xl">
+        <div id="about" class="container mx-auto pb-3xl">
+          <p>
+            This is an audit report on various service configurations we use.
+            Use it to
+             <a class="underline" href="https://brave.com/published-proxy-config/#verification">confirm</a>
+             the services below are set correctly to protect user privacy.
+          </p>
+        </div>
     </main>
 
     <template id="config-block-template">
-        <section class="config-block pb-12">
-            <h2 class="text-h2 pb-4 text-text-primary"></h2>
-            <pre class="p-10 text-gray-70"><code class="language-javascript"></code></pre>
+        <section class="config-block pb-5xl">
+            <h2 class="text-heading-h3 pb-xl"></h2>
+            <pre class="p-4xl text-neutral-70"><code class="language-javascript"></code></pre>
         </section>
     </template>
 
-    <footer data-theme="dark" class="bg-gray-10 border-t border-divider-subtle text-white py-10">
+    <footer data-theme="dark" class="border-t border-divider-subtle text-white py-4xl">
         <div class="container mx-auto text-center">
-            <a id="log_url" href="#">GitHub workflow log</a>
-            <p id="run_date" class="text-gray-60"></p>
+            <p><a id="log_url" href="#">GitHub workflow log</a></p>
+            <p id="run_date" class="text-neutral-60"></p>
+            <p><a id="source_repo" href="#">source code</a></p>
         </div>
     </footer>
 

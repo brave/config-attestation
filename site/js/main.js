@@ -18,6 +18,7 @@ function appendData(data) {
 
     document.getElementById("log_url").href = `https://github.com/${data.github_repository}/actions/runs/${data.github_run_id}#step:3:4`;
     document.getElementById("run_date").textContent = `last update:  ${data.github_run_date}`;
+    document.getElementById("source_repo").href = `https://github.com/${data.github_repository}`;
 
     for (var i = 0; i < data.result.length; i++) {
         const template = document.querySelector("#config-block-template");

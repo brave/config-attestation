@@ -6,7 +6,7 @@
 @layer base {
 	html,
 	body {
-		font-size: 16px;
+		@apply text-large-regular;
 		height: 100%;
 	}
 

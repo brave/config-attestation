@@ -1,5 +1,5 @@
 {
-  "name": "config-attestation-private",
+  "name": "config-attestation",
   "version": "1.0.0",
   "description": "[![config](https://github.com/brave-experiments/config-attestation-private/actions/workflows/config.yml/badge.svg)](https://github.com/brave-experiments/config-attestation-private/actions/workflows/config.yml)",
   "main": "index.js",

@@ -1,7 +1,7 @@
 {
   "name": "config-attestation",
   "version": "1.0.0",
-  "description": "[![config](https://github.com/brave-experiments/config-attestation-private/actions/workflows/config.yml/badge.svg)](https://github.com/brave-experiments/config-attestation-private/actions/workflows/config.yml)",
+  "description": "[![config](https://github.com/brave/config-attestation/actions/workflows/config.yml/badge.svg)](https://github.com/brave/config-attestation/actions/workflows/config.yml)",
   "main": "index.js",
   "scripts": {
     "start": "npm run build:prism && npm run start:tailwind",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brave-experiments/config-attestation-private.git"
+    "url": "git+https://github.com/brave/config-attestation.git"
   },
   "author": "",
   "license": "MPL-2.0",

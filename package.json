@@ -19,6 +19,6 @@
   "dependencies": {
     "@brave/leo": "github:brave/leo#1604c652f7aae08a792f26a44fff5187a4e19406",
     "prismjs": "1.29.0",
-    "tailwindcss": "3.4.15"
+    "tailwindcss": "3.4.17"
   }
 }

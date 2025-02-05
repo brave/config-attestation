@@ -17,7 +17,7 @@
   "author": "",
   "license": "MPL-2.0",
   "dependencies": {
-    "@brave/leo": "github:brave/leo#f2175386c81669f8a7583ad7ac22d54d7f7d1b08",
+    "@brave/leo": "github:brave/leo#17ccd100de5792d53ecd5b2d61c749d474c749e6",
     "prismjs": "1.29.0",
     "tailwindcss": "3.4.17"
   }

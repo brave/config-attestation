@@ -18,6 +18,6 @@
             else
                 .
             end
-        ) | select(.domain | test("((collector|star).wdp|fl|p2a|p2a-json|pcdn|translate).brave.com") )
+        ) | select(.domain | test("((collector|star).wdp|pcdn|translate).brave.com") )
     ]
 }

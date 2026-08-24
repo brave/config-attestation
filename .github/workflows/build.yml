@@ -1,0 +1,52 @@
+name: build
+concurrency:
+  group: build-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write # for the config.yml call below
+  id-token: write
+
+jobs:
+  build:
+    # a fork PR's token is read-only, so the push below would fail
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Setup pnpm and Node
+        # pnpm version comes from the "packageManager" field in package.json;
+        # the action also runs `pnpm install` (frozen by default under CI)
+        uses: pnpm/setup@84cb39b217b10273981911c288cd62326dc7c6d2 # v2.0.2
+        with:
+          runtime: node@lts
+          cache: true
+      - name: Build
+        run: pnpm run build
+      - name: Commit rebuilt assets
+        shell: bash # pushes made with GITHUB_TOKEN do not trigger another run
+        run: |
+          if git diff --quiet -- site/; then
+            echo "site/ already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "build: rebuild site assets" -- site/
+          git push
+
+  # fetch the config and publish the rebuilt site, private repo only
+  config:
+    needs: build
+    if: github.event.repository.name == 'config-attestation-private'
+    uses: ./.github/workflows/config.yml
+    secrets: inherit

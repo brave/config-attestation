@@ -1,0 +1,11 @@
+# Only accept dependency versions published at least 2 days ago.
+minimumReleaseAge: 2880
+
+allowBuilds:
+  # Git-hosted, so pnpm runs its `prepare` (rollup build). Keyed by tarball
+  # URL, so the hash below must track the one Renovate bumps in package.json.
+  "@brave/leo@https://codeload.github.com/brave/leo/tar.gz/53850d6d6b12ea0e675dba71c8460f51b22bf90a": true
+  # Transitive deps of leo. Leo declares its own allowBuilds, but pnpm reads
+  # that setting only from the workspace root, so it does not carry over here.
+  esbuild: true
+  svelte-preprocess: true

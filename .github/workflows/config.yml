@@ -5,6 +5,7 @@ concurrency:
   cancel-in-progress: true
 
 on:
+  workflow_call: # see build.yml
   workflow_dispatch:
   schedule:
   - cron:  '0 */6 * * *' # run every 6 hours
@@ -21,6 +22,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # when called from build.yml, pick up the assets it just pushed;
+          # empty (and therefore the default ref) on schedule/dispatch
+          ref: ${{ github.head_ref }}
       - name: fetch and display config
         shell: bash # set -eo pipefail: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#exit-codes-and-error-action-preference
         run: >-

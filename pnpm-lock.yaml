@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@brave/leo':
         specifier: github:brave/leo#3dcf0ebd3c1f3b1d074f48edf93a64fd657a7208
-        version: https://codeload.github.com/brave/leo/tar.gz/3dcf0ebd3c1f3b1d074f48edf93a64fd657a7208(postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.5.26))(postcss@8.5.26)(storybook@8.6.18(supports-color@7.2.0))
+        version: https://codeload.github.com/brave/leo/tar.gz/3dcf0ebd3c1f3b1d074f48edf93a64fd657a7208(postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.5.26))(postcss@8.5.26)(storybook@8.6.19(supports-color@7.2.0))
       prismjs:
         specifier: 1.30.0
         version: 1.30.0
@@ -242,8 +242,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@storybook/core@8.6.18':
-    resolution: {integrity: sha512-dRBP2TnX6fGdS0T2mXBHjkS/3Nlu1ra1huovZVFuM67CYMzrhM/3hX/zru1vWSC5rqY93ZaAhjMciPW4pK5mMQ==}
+  '@storybook/core@8.6.19':
+    resolution: {integrity: sha512-o9TZn0YxSxjBOxkTlJWq9jFTZn53Wr83HNvX0k8YYxxA5evwt7kWubKs/RMTEIyXbsBKW7XUw7Cq9fLmhgJ3Bg==}
     peerDependencies:
       prettier: ^2 || ^3
     peerDependenciesMeta:
@@ -263,8 +263,8 @@ packages:
     peerDependencies:
       storybook: ^8.6.15
 
-  '@storybook/theming@8.6.18':
-    resolution: {integrity: sha512-n6OEjEtHupa2PdTwWzRepr7cO8NkDd4rgF6BKLitRbujOspLxzMBEqdphs+QLcuiCIgf33SqmEA64QWnbSMhPw==}
+  '@storybook/theming@8.6.19':
+    resolution: {integrity: sha512-IRbIk5klNSnSqBye/0FgkkyyIbJjzW+p1qaKGOYI+yKRktLCInypl9bh5YFkaPpr0m4lk7wY/GzS0uXPL1gS3g==}
     peerDependencies:
       storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
@@ -874,8 +874,8 @@ packages:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
 
-  storybook@8.6.18:
-    resolution: {integrity: sha512-p8seiSI6FiVY6P3V0pG+5v7c8pDMehMAFRWEhG5XqIBSQszzOjDnW2rNvm3odoLKfo3V3P6Cs6Hv9ILzymULyQ==}
+  storybook@8.6.19:
+    resolution: {integrity: sha512-m1kbDTwaF8mwx0VdarVCF9nAedbxsAylD5nmohfe0cWRLn2UZGOtk/JuayhNeSQAvOgVa8rzoN9UvbAt0jnuIg==}
     hasBin: true
     peerDependencies:
       prettier: ^2 || ^3
@@ -1019,9 +1019,9 @@ snapshots:
 
   '@babel/runtime@7.29.7': {}
 
-  '@brave/leo@https://codeload.github.com/brave/leo/tar.gz/3dcf0ebd3c1f3b1d074f48edf93a64fd657a7208(postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.5.26))(postcss@8.5.26)(storybook@8.6.18(supports-color@7.2.0))':
+  '@brave/leo@https://codeload.github.com/brave/leo/tar.gz/3dcf0ebd3c1f3b1d074f48edf93a64fd657a7208(postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.5.26))(postcss@8.5.26)(storybook@8.6.19(supports-color@7.2.0))':
     dependencies:
-      '@storybook/test': 8.6.15(storybook@8.6.18(supports-color@7.2.0))
+      '@storybook/test': 8.6.15(storybook@8.6.19(supports-color@7.2.0))
       svelte: 5.57.1
       svelte-preprocess: 6.0.5(postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.5.26))(postcss@8.5.26)(svelte@5.57.1)
       tailwindcss: 3.4.19
@@ -1152,9 +1152,9 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.20.1
 
-  '@storybook/core@8.6.18(storybook@8.6.18(supports-color@7.2.0))(supports-color@7.2.0)':
+  '@storybook/core@8.6.19(storybook@8.6.19(supports-color@7.2.0))(supports-color@7.2.0)':
     dependencies:
-      '@storybook/theming': 8.6.18(storybook@8.6.18(supports-color@7.2.0))
+      '@storybook/theming': 8.6.19(storybook@8.6.19(supports-color@7.2.0))
       better-opn: 3.0.2
       browser-assert: 1.2.1
       esbuild: 0.25.12
@@ -1173,26 +1173,26 @@ snapshots:
 
   '@storybook/global@5.0.0': {}
 
-  '@storybook/instrumenter@8.6.15(storybook@8.6.18(supports-color@7.2.0))':
+  '@storybook/instrumenter@8.6.15(storybook@8.6.19(supports-color@7.2.0))':
     dependencies:
       '@storybook/global': 5.0.0
       '@vitest/utils': 2.1.9
-      storybook: 8.6.18(supports-color@7.2.0)
+      storybook: 8.6.19(supports-color@7.2.0)
 
-  '@storybook/test@8.6.15(storybook@8.6.18(supports-color@7.2.0))':
+  '@storybook/test@8.6.15(storybook@8.6.19(supports-color@7.2.0))':
     dependencies:
       '@storybook/global': 5.0.0
-      '@storybook/instrumenter': 8.6.15(storybook@8.6.18(supports-color@7.2.0))
+      '@storybook/instrumenter': 8.6.15(storybook@8.6.19(supports-color@7.2.0))
       '@testing-library/dom': 10.4.0
       '@testing-library/jest-dom': 6.5.0
       '@testing-library/user-event': 14.5.2(@testing-library/dom@10.4.0)
       '@vitest/expect': 2.0.5
       '@vitest/spy': 2.0.5
-      storybook: 8.6.18(supports-color@7.2.0)
+      storybook: 8.6.19(supports-color@7.2.0)
 
-  '@storybook/theming@8.6.18(storybook@8.6.18(supports-color@7.2.0))':
+  '@storybook/theming@8.6.19(storybook@8.6.19(supports-color@7.2.0))':
     dependencies:
-      storybook: 8.6.18(supports-color@7.2.0)
+      storybook: 8.6.19(supports-color@7.2.0)
 
   '@sveltejs/acorn-typescript@1.0.13(acorn@8.18.0)':
     dependencies:
@@ -1769,9 +1769,9 @@ snapshots:
 
   source-map@0.6.1: {}
 
-  storybook@8.6.18(supports-color@7.2.0):
+  storybook@8.6.19(supports-color@7.2.0):
     dependencies:
-      '@storybook/core': 8.6.18(storybook@8.6.18(supports-color@7.2.0))(supports-color@7.2.0)
+      '@storybook/core': 8.6.19(storybook@8.6.19(supports-color@7.2.0))(supports-color@7.2.0)
     transitivePeerDependencies:
       - bufferutil
       - supports-color

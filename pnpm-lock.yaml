@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@brave/leo':
-        specifier: github:brave/leo#3dcf0ebd3c1f3b1d074f48edf93a64fd657a7208
-        version: https://codeload.github.com/brave/leo/tar.gz/3dcf0ebd3c1f3b1d074f48edf93a64fd657a7208(postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.5.26))(postcss@8.5.26)(storybook@8.6.19(supports-color@7.2.0))
+        specifier: github:brave/leo#103935a7ae2103069b529713f8bc71192aab73e7
+        version: https://codeload.github.com/brave/leo/tar.gz/103935a7ae2103069b529713f8bc71192aab73e7(postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.5.26))(postcss@8.5.26)(storybook@8.6.19(supports-color@7.2.0))
       prismjs:
         specifier: 1.30.0
         version: 1.30.0
@@ -39,8 +39,8 @@ packages:
     resolution: {integrity: sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw==}
     engines: {node: '>=6.9.0'}
 
-  '@brave/leo@https://codeload.github.com/brave/leo/tar.gz/3dcf0ebd3c1f3b1d074f48edf93a64fd657a7208':
-    resolution: {gitHosted: true, integrity: sha512-QvXK8VEhtqUKl+KsdRb2vB3eEU87dhyiYmLcwMbatzS86gSrMGemJxUDGrEemy7vIsIJQQqE883VJZs0TkhT5A==, tarball: https://codeload.github.com/brave/leo/tar.gz/3dcf0ebd3c1f3b1d074f48edf93a64fd657a7208}
+  '@brave/leo@https://codeload.github.com/brave/leo/tar.gz/103935a7ae2103069b529713f8bc71192aab73e7':
+    resolution: {gitHosted: true, integrity: sha512-nP6TxDaHxqNtC0JAVUVIps7fbvpcQrSVAlNPt/7wnEBIK6hRazSDRp4jacwAjQzbxkfGFeWGoEsFG3wA7zMAvw==, tarball: https://codeload.github.com/brave/leo/tar.gz/103935a7ae2103069b529713f8bc71192aab73e7}
     version: 0.0.1
     hasBin: true
     peerDependencies:
@@ -1019,7 +1019,7 @@ snapshots:
 
   '@babel/runtime@7.29.7': {}
 
-  '@brave/leo@https://codeload.github.com/brave/leo/tar.gz/3dcf0ebd3c1f3b1d074f48edf93a64fd657a7208(postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.5.26))(postcss@8.5.26)(storybook@8.6.19(supports-color@7.2.0))':
+  '@brave/leo@https://codeload.github.com/brave/leo/tar.gz/103935a7ae2103069b529713f8bc71192aab73e7(postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.5.26))(postcss@8.5.26)(storybook@8.6.19(supports-color@7.2.0))':
     dependencies:
       '@storybook/test': 8.6.15(storybook@8.6.19(supports-color@7.2.0))
       svelte: 5.57.1
